@@ -42,7 +42,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         return
       });
     } catch (error) {
-      return res.status(400).send({ message: 'image url is not public' });
+      return res.status(400).send({ message: 'image url is not valid' });
     }
   });
   
