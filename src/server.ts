@@ -37,9 +37,10 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
     try {
       let filteredpath = await filterImageFromURL(image_url)
-      await res.status(200).sendFile(filteredpath);
-      await deleteLocalFiles([filteredpath])
-      return
+      return await res.status(200).sendFile(filteredpath, (err) => {
+        deleteLocalFiles([filteredpath])
+        return
+      });
     } catch (error) {
       return res.status(400).send({ message: 'image url is not public' });
     }
