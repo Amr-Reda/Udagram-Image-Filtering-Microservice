@@ -59,9 +59,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SERVER}}filteredimage?image_url=https://udacity-test-aws.s3.amazonaws.com/img/van-336606_1280.jpg",
+					"raw": "http://{{EB_URL}}/filteredimage?image_url=https://udacity-test-aws.s3.amazonaws.com/img/van-336606_1280.jpg",
+					"protocol": "http",
 					"host": [
-						"{{SERVER}}filteredimage"
+						"{{EB_URL}}"
+					],
+					"path": [
+						"filteredimage"
 					],
 					"query": [
 						{
@@ -98,15 +102,15 @@
 	],
 	"variable": [
 		{
-			"id": "b5adb916-766b-4755-b497-b68e13ebda54",
+			"id": "04a24b76-5fc8-4ed2-81f4-bd2f44f3b9a1",
 			"key": "HOST",
 			"value": "localhost:8082",
 			"type": "string"
 		},
 		{
-			"id": "468a5989-b7b9-49a7-b273-07832eb7f181",
-			"key": "SERVER",
-			"value": "http://imagefilter-env.xwefu7p823.us-east-1.elasticbeanstalk.com/",
+			"id": "b33097af-6ea8-467f-a5d4-183d05924f3e",
+			"key": "EB_URL",
+			"value": "imagefilter-env.xwefu7p823.us-east-1.elasticbeanstalk.com",
 			"type": "string"
 		}
 	],
