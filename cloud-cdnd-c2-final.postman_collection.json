@@ -52,6 +52,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://imagefilter-env.xwefu7p823.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://udacity-test-aws.s3.amazonaws.com/img/van-336606_1280.jpg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}filteredimage?image_url=https://udacity-test-aws.s3.amazonaws.com/img/van-336606_1280.jpg",
+					"host": [
+						"{{SERVER}}filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://udacity-test-aws.s3.amazonaws.com/img/van-336606_1280.jpg"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -78,9 +98,15 @@
 	],
 	"variable": [
 		{
-			"id": "1df3d31a-de30-494b-a3d0-f1228dd8713c",
+			"id": "b5adb916-766b-4755-b497-b68e13ebda54",
 			"key": "HOST",
 			"value": "localhost:8082",
+			"type": "string"
+		},
+		{
+			"id": "468a5989-b7b9-49a7-b273-07832eb7f181",
+			"key": "SERVER",
+			"value": "http://imagefilter-env.xwefu7p823.us-east-1.elasticbeanstalk.com/",
 			"type": "string"
 		}
 	],
